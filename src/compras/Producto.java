@@ -6,7 +6,7 @@ public class Producto {
     private String tipo;
     private int totalProductosPedidos;
 
-    Producto(int codigo, String nombre, String tipo) {
+    public Producto(int codigo, String nombre, String tipo) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -17,7 +17,7 @@ public class Producto {
     }
 
     public void setCodigo(int codigo) {
-        this.codigo = codigo;
+        
     }
 
     public int getCodigo() {
