@@ -17,14 +17,14 @@ public class ObjTaller3 {
         ArrayList<Producto> productos1 = new ArrayList<>();
         productos1.add(p1);
         productos1.add(p3);
-        OrdenCompra orden1 = new OrdenCompra(**, "Aseo", emp1, productos1);
+        OrdenCompra orden1 = new OrdenCompra(101, "Aseo", emp1, productos1);
 
-        System.out.println(Producto.getTotalProductosPedidos());
+        System.out.println(Producto.getTotalProductosPedidos()); ///////1 =     2
         orden1.agregarProducto(p4);
-        System.out.println(Producto.getTotalProductosPedidos());
-        orden1.**(p5);
-        System.out.println(Producto.getTotalProductosPedidos());
-        System.out.println("Orden " + orden1.codigo + " creada");
+        System.out.println(Producto.getTotalProductosPedidos()); ///////// 2 = 2
+        orden1.agregarProducto(p5);
+        System.out.println(Producto.getTotalProductosPedidos()); ////////// 3 = 3
+        System.out.println("Orden " + orden1.codigo + " creada"); ////////////4 = 101
 
         Empleado emp2 = new Empleado(128, "Susana", "Administradora de sucursal");
         ArrayList<Producto> productos2 = new ArrayList<>();
@@ -32,11 +32,11 @@ public class ObjTaller3 {
         productos2.add(p4);
         OrdenCompra orden2 = new OrdenCompra(202, "Ropa", emp2, productos2);
 
-        System.out.println(Producto.getTotalProductosPedidos());
-        System.out.println(emp2.cedula + " va a retirar producto");
+        System.out.println(Producto.getTotalProductosPedidos()); /////////// 5 = 5
+        System.out.println(emp2.cedula + " va a retirar producto"); ///////// 6 = 128 va a retirar
         orden2.retirarProducto(emp2, p4);
-        System.out.println(Producto.getTotalProductosPedidos());
-        orden2.retirarProducto(**, p2);
-        System.out.println(Producto.getTotalProductosPedidos());
+        System.out.println(Producto.getTotalProductosPedidos()); ///////////// 7 = pantalon retirado
+        orden2.retirarProducto(emp1, p2);
+        System.out.println(Producto.getTotalProductosPedidos()); ///////////// 8 = 4 
     }
 }
